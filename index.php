@@ -4,10 +4,10 @@
 
 echo "Hello from Heroku<br><br>";
 
-$serverName = "herokuhostname";
-$dbUsername = "username";
-$dbUserPassword = "passowrd";
-$dbName = "dbname";
+$serverName = "localhost"; // heroku hostname
+$dbUsername = "root"; // heroku mysql add-on username
+$dbUserPassword = "root"; // heroku mysql add-on password
+$dbName = "mysql"; // heroku db name
 
 try {
     $db = new PDO("mysql:dbname=$dbName;host=$serverName;charset=utf8mb4;", $dbUsername, $dbUserPassword);
